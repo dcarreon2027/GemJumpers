@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gem Jumpers</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <canvas id="display" class="overlay"></canvas>
+
+    <div class="loading-screen">
+        <div class="loading-text">
+            <img src="controls.png" alt="Animated Icon">
+        </div>
+    </div>
+
+    <div id="map"></div>
+    <img id="gem" src="img/elements/gem.png" alt="Gem">
+    <h2 id="score1">0</h2>
+    <h2 id="score2">0</h2>
+
+    <p id="timer">90</p>
+    <img id="winner" src="blob1-crown.png" alt="Winner" style="display: none;">
+    <div class="options" id="options" style="display:none;">
+        <a href="game.html">Retry</a>
+        <a href="index.html">Home</a> 
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/data/collisiondata.js"></script>
+    <script src="js/collisionblock.js"></script>
+    <script src="js/classes/sprite.js"></script>
+    <script src="js/classes/player.js"></script>
+    <script src="js/classes/player2.js"></script>
+    <script src="js/eventListeners.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

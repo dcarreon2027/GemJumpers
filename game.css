@@ -1,0 +1,121 @@
+@font-face {
+    font-family: pixelbold;
+    src: url(fonts/BmLeaves.ttf);
+}
+
+@font-face {
+    font-family: pixelnormal;
+    src: url(fonts/SLB.ttf);
+}
+
+body {
+    background: black;
+}
+
+
+#map {
+    position: absolute;
+    height: 576px;
+    width: 1024px;
+}
+
+#gem {
+    position: absolute;
+    display: none;
+}
+
+#timer {
+    color: #8474ad;
+    font-size: 40px;
+    text-align: center;
+    font-family: pixelbold;
+    text-shadow: 
+        -5px -5px 0 #120a2b,  
+        5px -5px 0 #120a2b,
+        -5px 5px 0 #120a2b,
+        5px 5px 0 #120a2b;
+    z-index: 99;
+    right: 470px;
+    bottom: 760px;
+    position: relative;
+}
+
+.overlay {
+    top: 2;
+    left: 2;
+    width: 1024px;
+    height: 576px;
+    background-color: #120a2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#winner {
+    z-index: 99;
+    left: 240px;
+    bottom: 770px;
+    width: auto;
+    height: 160px;
+    position: relative;
+}
+
+
+.options, a {
+    color: #a898cf;
+    font-family: pixelnormal;
+    font-size: 20px;
+    bottom: 380px;
+    left: 180px;
+    z-index: 98;
+    position: relative;
+    text-decoration: none;
+    margin-right: 80px;
+}
+
+a:hover {
+    color: #7563a5;
+}
+
+#score1 {
+    color: #9e2149;
+    background-color: #df759f;
+    border: solid 5px;
+    border-color: #9e2149;
+    font-size: 30px;
+    text-align: center;
+    font-family: pixelbold;
+    z-index: 99;
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+#score2 {
+    color: #1c377b;
+    background-color: #749fcb;
+    border: solid 5px;
+    border-color: #1c377b;
+    font-size: 30px;
+    text-align: center;
+    font-family: pixelbold;
+    z-index: 99;
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 1024px;
+    height: 576px;
+    background: #2e2644;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+

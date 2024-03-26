@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Gem Jumpers</title>
+    <style>
+
+        body {
+            background: black;
+        }
+
+        canvas {
+            background-image: url('homebg.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 1024px;
+            height: 576px;
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 1024px;
+            height: 576px;
+            background: #2e2644;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+
+        .gif-container {
+        position: relative;
+        width: 300px;
+        height: 100px;
+        top: -400px;
+        left: 350px;
+
+        }
+
+        .gif-container img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        }
+
+        .gif-container img.gif {
+        opacity: 0;
+        }
+
+        .gif-container:hover img.static {
+        opacity: 0;
+        }
+
+        .gif-container:hover img.gif {
+        opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="display" class="overlay"></canvas>
+
+    <div class="loading-screen">
+        <div class="loading-text">
+            <img src="title.png" alt="Animated Icon">
+        </div>
+    </div>
+
+    <div class="gif-container">
+        <img src="playstatic.png" alt="static image">
+        <a href="game.html"><img src="playbutton.gif" alt="GIF" class="gif"></a>
+      </div>
+
+      <div class="gif-container">
+        <img src="aboutstatic.png" alt="static image">
+        <a href="about.html"><img src="aboutbutton.gif" alt="GIF" class="gif"></a>
+      </div>
+      
+      <script>
+        //loading screen
+        window.addEventListener('load', function () {
+            var loadingScreen = document.querySelector('.loading-screen');
+            setTimeout(function () {
+                loadingScreen.style.transition = 'opacity 1.5s ease-in-out';
+                loadingScreen.style.opacity = '0';
+                setTimeout(function () {
+                    loadingScreen.style.display = 'none';
+                }, 1500);  
+            }, 1700); 
+        });
+        
+        //buttons
+        const gifContainers = document.querySelectorAll('.gif-container');
+
+        gifContainers.forEach(container => {
+            const gif = container.querySelector('.gif');
+
+            container.addEventListener('mouseenter', () => {
+                gif.src = gif.src;
+                gif.play();
+            });
+        });
+
+    </script>
+      
+</body>
+</html>
